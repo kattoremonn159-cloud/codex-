@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manga Shelf</title>
+    <meta name="description" content="漫画単行本の所持管理に特化した Manga Shelf の公開準備ページです。" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #09141a;
+        --bg-soft: #0f2028;
+        --line: rgba(142, 241, 229, 0.22);
+        --text: #eef7f8;
+        --muted: #9ab4bb;
+        --accent: #7fe9dc;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle at top, rgba(87, 196, 187, 0.26), transparent 34%), linear-gradient(180deg, var(--bg-soft), var(--bg));
+        color: var(--text);
+        font-family: "Segoe UI", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+      }
+      main {
+        width: min(960px, calc(100vw - 32px));
+        border: 1px solid var(--line);
+        background: rgba(7, 16, 21, 0.78);
+        padding: 40px 32px;
+        backdrop-filter: blur(18px);
+        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.3);
+      }
+      .eyebrow {
+        margin: 0 0 12px;
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(40px, 10vw, 88px);
+        line-height: 0.94;
+        letter-spacing: -0.04em;
+      }
+      p {
+        margin: 18px 0 0;
+        max-width: 640px;
+        font-size: clamp(15px, 2.2vw, 18px);
+        line-height: 1.8;
+        color: var(--muted);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 28px;
+      }
+      .cell {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+      .cell strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 13px;
+        color: var(--accent);
+      }
+      .cell span { font-size: 14px; line-height: 1.6; }
+      footer {
+        margin-top: 28px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-size: 12px;
+        color: var(--muted);
+      }
+      @media (max-width: 720px) {
+        main { width: 100vw; min-height: 100vh; padding: 32px 20px 24px; }
+        .grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">Manga Shelf</p>
+      <h1>単行本管理を、<br />もっと軽く。</h1>
+      <p>Manga Shelf は、漫画単行本の所持巻数をすばやく確認し、買い忘れや重複購入を防ぐためのスマホアプリです。現在は正式公開に向けて準備中です。</p>
+      <section class="grid" aria-label="features">
+        <div class="cell"><strong>Manage</strong><span>手持ちの作品と巻数を一覧で把握</span></div>
+        <div class="cell"><strong>Search</strong><span>作品検索から本棚へ登録できる設計</span></div>
+        <div class="cell"><strong>Capture</strong><span>写真や画像からの取り込み導線を準備</span></div>
+      </section>
+      <footer>Preview page for app registration and public setup.</footer>
+    </main>
+  </body>
+</html>
